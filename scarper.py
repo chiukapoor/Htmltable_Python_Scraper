@@ -24,6 +24,8 @@ for record in soup.findAll('tr'):
         studentdata=re.sub(r"[\n\t\s]*", "",studentdata)
         studentdatasaved = studentdatasaved + "\n" + studentdata[1:]
 
+#Enter the column names of you choice
+header=""
 #To store data in .csv in your PC. Change the name according to your need.
 file=open(os.path.expanduser("Student.csv"),"wb")
 file.write(bytes(header, encoding="ascii",errors="ignore"))
